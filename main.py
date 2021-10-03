@@ -1,4 +1,3 @@
-
 # Copyright 2020 Google Inc. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +27,12 @@ moves = ['F', 'T', 'L', 'R']
 def move():
     request.get_data()
     logger.info(request.json)
-    return moves[random.randrange(len(moves))]
+    if(x==0 & y==0):
+        return 'T'
+    else:
+        return moves[random.randrange(len(moves))]
+    
+    
 
 if __name__ == "__main__":
   app.run(debug=False,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
