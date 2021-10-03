@@ -27,7 +27,7 @@ moves = ['F', 'T', 'L', 'R']
 def move():
     request.get_data()
     logger.info(request.json)
-    if(x==0 & y==0):
+    if((x<3 | y<3)|((x<3 & y<3)):
         return 'T'
     else:
         return moves[random.randrange(len(moves))]
