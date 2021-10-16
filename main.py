@@ -26,7 +26,7 @@ moves = ['F', 'T', 'L', 'R']
 @app.route("/", methods=['POST'])
 def move():
     request.get_data()
-    logger.info(request.json)
+    info(request.json)
     if((x<3 | y<3)|((x<3 & y<3)):
         return 'T'
     else:
